@@ -17,6 +17,7 @@
   },
   "projects": {
     "testnext": { "tags": [] },
-    "testnext-e2e": { "tags": [], "implicitDependencies": ["testnext"] }
+    "testnext-e2e": { "tags": [], "implicitDependencies": ["testnext"] },
+    "shared-components": { "tags": [] }
   }
 }

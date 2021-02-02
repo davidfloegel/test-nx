@@ -25,7 +25,9 @@
       "targets": {
         "build": {
           "executor": "@nrwl/next:build",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "root": "apps/testnext",
             "outputPath": "dist/apps/testnext"
@@ -56,12 +58,16 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/testnext/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": [
+              "apps/testnext/**/*.{ts,tsx,js,jsx}"
+            ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/testnext"],
+          "outputs": [
+            "coverage/apps/testnext"
+          ],
           "options": {
             "jestConfig": "apps/testnext/jest.config.js",
             "passWithNoTests": true
@@ -90,7 +96,34 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/testnext-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/testnext-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
+    },
+    "shared-components": {
+      "root": "libs/shared-components",
+      "sourceRoot": "libs/shared-components/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared-components/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared-components"
+          ],
+          "options": {
+            "jestConfig": "libs/shared-components/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }
